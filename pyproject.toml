@@ -24,8 +24,9 @@ build-backend = "setuptools.build_meta"
 
 # Project settings -----------------------------------------------------------------------------------------------------
 [project]
+[project]
 name = "doclayout_yolo"
-dynamic = ["version"]
+version = "0.1.0" 
 description = "DocLayout-YOLO: an effecient and robust document layout analysis method."
 readme = "README.md"
 requires-python = ">=3.8"
@@ -133,8 +134,6 @@ doclayout_yolo = "doclayout_yolo.cfg:entrypoint"
 packages = { find = { where = ["."], include = ["doclayout_yolo", "doclayout_yolo.*"] } }
 package-data = { "doclayout_yolo" = ["**/*.yaml"], "doclayout_yolo.assets" = ["*.jpg"] }
 
-[tool.setuptools.dynamic]
-version = { attr = "doclayout_yolo.__version__" }
 
 [tool.pytest.ini_options]
 addopts = "--doctest-modules --durations=30 --color=yes"
